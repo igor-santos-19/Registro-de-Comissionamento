@@ -1,7 +1,7 @@
 create database registrocomissionamento;
 use registrocomissionamento;
 
-create table OrdemDeServicoConcluida(
+create table ordemdeservicoconcluida(
 	id int auto_increment,
     cliente int,
     protocolo int,
@@ -21,7 +21,7 @@ create table OrdemDeServicoConcluida(
     primary key(id)
 );
 
-create table OrdemDeServicoPendente (
+create table ordemdeservicopendente (
 	id int auto_increment,
     cliente int,
     protocolo int,
