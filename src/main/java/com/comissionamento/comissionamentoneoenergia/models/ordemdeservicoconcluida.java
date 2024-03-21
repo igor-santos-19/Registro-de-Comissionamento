@@ -18,7 +18,7 @@ public class ordemdeservicoconcluida {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(columnDefinition = "integer", length = 255)
     private Integer cliente;
