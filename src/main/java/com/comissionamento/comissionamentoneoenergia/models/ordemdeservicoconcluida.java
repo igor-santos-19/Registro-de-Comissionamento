@@ -18,7 +18,7 @@ public class ordemdeservicoconcluida {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(columnDefinition = "integer", length = 255)
     private Integer cliente;
@@ -68,4 +68,9 @@ public class ordemdeservicoconcluida {
     @Column(name = "dataenvio")
     @Temporal(TemporalType.DATE)
     private Date dataenvio;
+
+    public Integer getId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getId'");
+    }
 }

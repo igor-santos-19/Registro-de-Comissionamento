@@ -6,8 +6,11 @@ import org.springframework.stereotype.Repository;
 import com.comissionamento.comissionamentoneoenergia.models.ordemdeservicopendente;
 
 @Repository
+
+//Arquivo respository basicamente é responsavel pelas consultas usando meio q uma funcao automatica de busca do spring
+
 public interface ordemdeservicopendenteRepositories extends JpaRepository <ordemdeservicopendente, Long > {
 
-    ordemdeservicopendente findByCliente(Integer cliente);
+    ordemdeservicopendente findByCliente(Integer cliente); //Teste de consulta no campo cliente 
     
 }

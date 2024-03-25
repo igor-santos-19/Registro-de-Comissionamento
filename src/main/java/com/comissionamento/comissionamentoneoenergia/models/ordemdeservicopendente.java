@@ -19,11 +19,11 @@ import jakarta.persistence.TemporalType;
 public class ordemdeservicopendente {
    
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Cria chave primaria 
+    private Long id;
 
-    @Column(columnDefinition = "integer", length = 255)
-    private Integer cliente;
+    @Column(columnDefinition = "integer", length = 255) // Sempre que aparecer algo @ é uma "Conotação" do spring para identificar oq e
+    private Integer cliente;                            // nesse caso ele esta criando um campo cliente no BD ***Isso tambem vale para os outros***
 
     @Column(columnDefinition = "integer", length = 255)
     private Integer protocolo;
@@ -63,5 +63,10 @@ public class ordemdeservicopendente {
 
     @Column(length = 255)
     private Integer dias;
+
+    public Long getId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getId'");
+    }
 
 }
