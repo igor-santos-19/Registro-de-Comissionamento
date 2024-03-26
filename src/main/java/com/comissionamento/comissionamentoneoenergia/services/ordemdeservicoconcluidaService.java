@@ -19,10 +19,10 @@ public class ordemdeservicoconcluidaService {
     @Autowired
     private ordemdeservicoconcluidaRepositories ordemdeservicoconcluidaRepositories;
 
-    public ordemdeservicoconcluida findById(Integer id){ //Funcao para procurar a ose pelo id
-         Optional<ordemdeservicoconcluida> ordemdeservicoconcluida = this.ordemdeservicoconcluidaRepositories.findById(id);
+    public ordemdeservicoconcluida findById(Long long1){ //Funcao para procurar a ose pelo id
+         Optional<ordemdeservicoconcluida> ordemdeservicoconcluida = this.ordemdeservicoconcluidaRepositories.findById(long1);
          return ordemdeservicoconcluida.orElseThrow(()-> new RuntimeException(
-            "Ordem de Serviço Concluida não encontrada " + id + " Tipo: " + ordemdeservicoconcluida.class.getName()
+            "Ordem de Serviço Concluida não encontrada " + long1 + " Tipo: " + ordemdeservicoconcluida.class.getName()
          ));
     }
 
@@ -38,7 +38,7 @@ public class ordemdeservicoconcluidaService {
         return this.ordemdeservicoconcluidaRepositories.save(newObj);
     }
 
-    public void delete(Integer Id){ //Funcao para deletar uma ose 
+    public void delete(Long Id){ //Funcao para deletar uma ose 
         findById(Id);
         try {
             this.ordemdeservicoconcluidaRepositories.deleteById(Id);   

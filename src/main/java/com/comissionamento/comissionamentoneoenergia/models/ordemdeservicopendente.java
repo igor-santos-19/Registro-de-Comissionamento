@@ -2,6 +2,8 @@ package com.comissionamento.comissionamentoneoenergia.models;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -64,9 +66,119 @@ public class ordemdeservicopendente {
     @Column(length = 255)
     private Integer dias;
 
+
     public Long getId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getId'");
+        return this.id;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @JsonIgnore
+    public Integer getCliente() {
+        return this.cliente;
+    }
+
+    public void setCliente(Integer cliente) {
+        this.cliente = cliente;
+    }
+
+    public Integer getProtocolo() {
+        return this.protocolo;
+    }
+
+    public void setProtocolo(Integer protocolo) {
+        this.protocolo = protocolo;
+    }
+
+    public String getEmpresa() {
+        return this.empresa;
+    }
+
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+
+    public String getUteperesponsavel() {
+        return this.uteperesponsavel;
+    }
+
+    public void setUteperesponsavel(String uteperesponsavel) {
+        this.uteperesponsavel = uteperesponsavel;
+    }
+
+    public String getMotivo() {
+        return this.motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+
+    public String getSituacao() {
+        return this.situacao;
+    }
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+
+    public String getOrgaoexecutor() {
+        return this.orgaoexecutor;
+    }
+
+    public void setOrgaoexecutor(String orgaoexecutor) {
+        this.orgaoexecutor = orgaoexecutor;
+    }
+
+    public String getLocalose() {
+        return this.localose;
+    }
+
+    public void setLocalose(String localose) {
+        this.localose = localose;
+    }
+
+    public Date getDataabertura() {
+        return this.dataabertura;
+    }
+
+    public void setDataabertura(Date dataabertura) {
+        this.dataabertura = dataabertura;
+    }
+
+    public Date getDatalimite() {
+        return this.datalimite;
+    }
+
+    public void setDatalimite(Date datalimite) {
+        this.datalimite = datalimite;
+    }
+
+    public Date getDataconclusao() {
+        return this.dataconclusao;
+    }
+
+    public void setDataconclusao(Date dataconclusao) {
+        this.dataconclusao = dataconclusao;
+    }
+
+    public String getForadoprazo() {
+        return this.foradoprazo;
+    }
+
+    public void setForadoprazo(String foradoprazo) {
+        this.foradoprazo = foradoprazo;
+    }
+
+    public Integer getDias() {
+        return this.dias;
+    }
+
+    public void setDias(Integer dias) {
+        this.dias = dias;
+    }
+  
 
 }
